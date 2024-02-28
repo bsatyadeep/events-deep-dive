@@ -4,7 +4,20 @@ on:
     types:
       - opened
       - edited
+    branches:
+      - main
+      - dev*
+      - featire/**
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - dev*
+      - feature/**
+    # paths-ignore:
+    #   - '.github/workflows/*'
+    # paths:
+    #   - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
